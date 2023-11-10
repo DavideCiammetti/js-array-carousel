@@ -19,3 +19,69 @@ per far girare le foto al click devo creare 2 eventi uno per la frecccia in bass
 ed il secondo per scorrerle all'indietro occore impostare la condizione come contatore > di 0 cosi che se è maggiore di 0 allora decrementiamo il contatore e ci scorre al contrario
 
 
+## BONUS 1:
+Aggiungere il ciclo infinito del carosello. Ovvero se è attiva la prima immagine e l'utente clicca la freccia per andare all’immagine precedente, dovrà comparire l’ultima immagine dell’array e viceversa.
+
+// creo evento per premere pulsante in alto
+tastoAlto.addEventListener('click', function() {
+    console.log(actualImg);
+    if(actualImg  < imgArray.length){
+
+        allItem[actualImg].classList.remove('active');
+        actualImg++;
+        allItem[actualImg].classList.add('active');
+    }
+
+});
+
+
+// creo evento per premere pulsante in basso
+tastoBasso.addEventListener('click', function() {
+    console.log(actualImg);
+    if(actualImg < imgArray.length){
+
+        allItem[actualImg].classList.remove('active');
+        actualImg++;
+        allItem[actualImg].classList.add('active');
+    }
+
+});
+
+array[1,2,3,4,5] ---------------> il mio array di 5 
+
+array.length[4]
+
+----immagine 1 ---- immagine 2 ---- immagine 3 ----- immagine 4 ----- immagine 5                    
+
+                  active
+array.length[0], array.length[1], array.length[2], array.length[3], varray.length[4]  5
+
+actualImg [0]----actualImg [1]-----actualImg [2]----actualImg [3]---actualImg [4] 5
+                1+
+
+    if(actualImg  < imgArray.length - 1){
+
+        allItem[actualImg].classList.remove('active');
+        actualImg++;
+        allItem[actualImg].classList.add('active');
+    }
+
+
+
+    
+    if(actualImg < imgArray.length -1){
+
+        allItem[actualImg].classList.remove('active');
+        actualImg++;
+        allItem[actualImg].classList.add('active');
+        
+    }else if(imgArray.length === 5){
+
+        imgArray.length = 0;
+        actualImg = 0;
+        allItem[actualImg].classList.remove('active');
+        actualImg++;
+        allItem[actualImg].classList.add('active');
+        imgArray.length++;
+    
+    }

@@ -29,7 +29,7 @@ for(let i= 0; i < imgArray.length; i++){
     // aggiungo la classe item a div
     item.classList.add('item')
     // aggiungo l'immagine a div
-    item.innerHTML += `<img src="./img/${imgArray[i]}" alt="img.1" />`;
+    item.innerHTML += `<img src="../img/${imgArray[i]}" alt="img.1" />`;
 
     if(i === actualImg){
         item.classList.add('active');
@@ -45,14 +45,19 @@ console.log(allItem);
 tastoAlto.addEventListener('click', function() {
     console.log(actualImg);
 
-    if(actualImg < imgArray.length -1 ){
+    if(actualImg < imgArray.length -1){
 
         allItem[actualImg].classList.remove('active');
         actualImg++;
         allItem[actualImg].classList.add('active');
+
+    }else if(actualImg === 4){
+        allItem[actualImg].classList.remove('active');
+        actualImg = 0;
+        imgArray.length = 5;
+        allItem[actualImg].classList.add('active');
     }
 });
-
 
 // creo evento per premere pulsante in basso
 tastoBasso.addEventListener('click', function() {
@@ -61,6 +66,12 @@ tastoBasso.addEventListener('click', function() {
 
         allItem[actualImg].classList.remove('active');
         actualImg--;
+        allItem[actualImg].classList.add('active');
+
+    }else if(actualImg === 0){
+        allItem[actualImg].classList.remove('active');
+        actualImg = 4;
+        imgArray.length = 0;
         allItem[actualImg].classList.add('active');
     }
 
