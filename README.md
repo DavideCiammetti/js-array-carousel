@@ -59,29 +59,7 @@ array.length[0], array.length[1], array.length[2], array.length[3], varray.lengt
 actualImg [0]----actualImg [1]-----actualImg [2]----actualImg [3]---actualImg [4] 5
                 1+
 
-    if(actualImg  < imgArray.length - 1){
+# BONUS 2:
 
-        allItem[actualImg].classList.remove('active');
-        actualImg++;
-        allItem[actualImg].classList.add('active');
-    }
-
-
-
-    
-    if(actualImg < imgArray.length -1){
-
-        allItem[actualImg].classList.remove('active');
-        actualImg++;
-        allItem[actualImg].classList.add('active');
-        
-    }else if(imgArray.length === 5){
-
-        imgArray.length = 0;
-        actualImg = 0;
-        allItem[actualImg].classList.remove('active');
-        actualImg++;
-        allItem[actualImg].classList.add('active');
-        imgArray.length++;
-    
-    }
+Aggiungere la visualizzazione di tutte le thumbnails sulla destra dell’immagine grande attiva, come nello screenshot proposto. Tutte le miniature avranno un layer di opacità scura, tranne quella corrispondente all’immagine attiva, che invece avrà un bordo colorato.
+Al click delle frecce, oltre al cambio di immagine attiva, gestire il cambio di miniatura attiva.
