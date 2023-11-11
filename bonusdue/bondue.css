@@ -85,7 +85,6 @@ body{
 .right-container{
     width: 20%;
     height: 400px;
-    background-color: rgb(236, 15, 11);
     position: absolute;
     right: 0;
 }

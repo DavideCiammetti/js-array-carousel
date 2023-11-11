@@ -71,7 +71,7 @@ tastoAlto.addEventListener('click', function() {
         actualImg++;
         allItem[actualImg].classList.add('active');
 
-    }else if(actualImg === 4){
+    }else if(actualImg <= 4){
         allItem[actualImg].classList.remove('active');
         actualImg = 0;
         imgArray.length = 5;
@@ -89,7 +89,7 @@ tastoBasso.addEventListener('click', function() {
         actualImg--;
         allItem[actualImg].classList.add('active');
 
-    }else if(actualImg === 0){
+    }else if(actualImg <= 0){
         allItem[actualImg].classList.remove('active');
         actualImg = 4;
         imgArray.length = 0;
