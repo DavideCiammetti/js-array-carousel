@@ -95,5 +95,5 @@ body{
 }
 
 .gray-scale{
-    filter: grayscale(0.7);
+    filter: grayscale(1);
 }
